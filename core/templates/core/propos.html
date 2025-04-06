@@ -1,0 +1,136 @@
+{% extends 'core/base.html' %}
+
+{% block title %}À propos de nous - Cabinet DATAVISION{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <!-- Hero Section -->
+    <div class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-blue-50/50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    Bienvenue chez <span class="text-blue-700">Cabinet DATAVISION</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Transformez vos données en décisions stratégiques ! Nous vous accompagnons dans l'analyse, la gestion et la valorisation de vos données pour faire face aux défis de demain.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Expertise Card -->
+            <div class="bg-white rounded-xl shadow-lg p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span class="text-3xl">📊</span>
+                    </div>
+                </div>
+                <h2 class="text-xl font-semibold text-blue-700 text-center mb-4">Expertise en Analyse de Données</h2>
+                <p class="text-gray-600 text-center leading-relaxed">
+                    Nous transformons vos données en informations stratégiques grâce à des analyses approfondies et des modèles prédictifs puissants. Chaque insight que nous fournissons est un levier pour votre prise de décision.
+                </p>
+            </div>
+
+            <!-- Solutions Card -->
+            <div class="bg-white rounded-xl shadow-lg p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span class="text-3xl">💡</span>
+                    </div>
+                </div>
+                <h2 class="text-xl font-semibold text-blue-700 text-center mb-4">Solutions Personnalisées</h2>
+                <p class="text-gray-600 text-center leading-relaxed">
+                    Nous savons que chaque organisation a ses propres défis. C'est pourquoi nous créons des solutions sur-mesure qui répondent précisément à vos besoins, vous permettant de maximiser l'impact de vos actions.
+                </p>
+            </div>
+
+            <!-- Development Card -->
+            <div class="bg-white rounded-xl shadow-lg p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span class="text-3xl">🌐</span>
+                    </div>
+                </div>
+                <h2 class="text-xl font-semibold text-blue-700 text-center mb-4">Développement d'Outils Web</h2>
+                <p class="text-gray-600 text-center leading-relaxed">
+                    Nous concevons des outils et des plateformes web performantes pour optimiser vos processus de gestion de données, améliorer votre efficacité et garantir une expérience utilisateur optimale.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-blue-700 mb-12">✨ Pourquoi choisir DATAVISION ?</h2>
+            <div class="space-y-6 max-w-4xl mx-auto">
+                <div class="bg-blue-50 rounded-xl p-6 transform transition hover:scale-102 hover:shadow-md">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <span class="text-xl">✔</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Une expertise pointue</h3>
+                            <p class="text-gray-600">Combinant les meilleures méthodologies en analyse de données, statistique, et développement numérique.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 rounded-xl p-6 transform transition hover:scale-102 hover:shadow-md">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <span class="text-xl">✔</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Un accompagnement complet</h3>
+                            <p class="text-gray-600">De la formation à l'implémentation de solutions automatisées pour rendre vos données intelligentes et actionnables.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 rounded-xl p-6 transform transition hover:scale-102 hover:shadow-md">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <span class="text-xl">✔</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Des solutions sur-mesure</h3>
+                            <p class="text-gray-600">Co-construites avec vous pour atteindre vos objectifs spécifiques et maximiser vos résultats.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact CTA Section -->
+    <div class="bg-gradient-to-br from-blue-600 to-blue-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="text-center text-white">
+                <h2 class="text-3xl font-bold mb-6">📞 Contactez-nous dès aujourd'hui !</h2>
+                <p class="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+                    N'hésitez pas à nous contacter pour discuter de vos projets et découvrir comment nous pouvons transformer vos données en succès.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-center space-x-3">
+                        <span class="font-medium">Téléphone :</span>
+                        <a href="tel:+22655624966" class="hover:text-blue-200 transition-colors">+226 55 62 49 66</a>
+                    </div>
+                    <div class="flex items-center justify-center space-x-3">
+                        <span class="font-medium">WhatsApp :</span>
+                        <div class="space-x-2">
+                            <a href="https://wa.me/22653148175" class="hover:text-blue-200 transition-colors">+226 53 14 81 75</a> /
+                            <a href="https://wa.me/22669769090" class="hover:text-blue-200 transition-colors">+226 69 76 90 90</a> /
+                            <a href="https://wa.me/22657808357" class="hover:text-blue-200 transition-colors">+226 57 80 83 57</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

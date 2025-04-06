@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Détail de l'article - {{ article.titre }}{% endblock %}
+
+{% block content %}
+    <div style="padding: 20px; max-width: 900px; margin: 0 auto; font-family: Arial, sans-serif; line-height: 1.6;">
+        <!-- Titre de l'article en gras et avec une couleur de fond douce -->
+        <h1 style="font-size: 2.5rem; color: #333; font-weight: bold; background-color: #f4f4f4; padding: 10px 20px; border-radius: 8px;">{{ article.titre }}</h1>
+        
+        <!-- Contenu de l'article -->
+        <div style="margin-top: 20px; padding: 15px; background-color: #fafafa; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <p style="font-size: 1.2rem; color: #555;"><strong>Contenu de l'article :</strong></p>
+            <p style="font-size: 1.1rem; color: #333; text-align: justify;">{{ article.contenu }}</p>
+        </div>
+
+        <!-- Informations supplémentaires -->
+        <div style="margin-top: 30px; font-size: 1.1rem; color: #555;">
+            <p><strong>Date de publication :</strong> <span style="color: #333;">{{ article.date_publication }}</span></p>
+            <p><strong>Auteur :</strong> <span style="color: #333; font-weight: bold;">{{ article.auteur }}</span></p>
+        </div>
+
+        <br>
+        
+        <!-- Lien de retour -->
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="{% url 'liste_articles' %}" style="color: #004aad; text-decoration: none; font-size: 1.1rem; font-weight: bold; border: 2px solid #004aad; padding: 10px 20px; border-radius: 5px;">Retour à la liste des articles</a>
+        </div>
+    </div>
+{% endblock %}
