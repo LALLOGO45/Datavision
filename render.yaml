@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: datavision
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn datavision.wsgi
+    autoDeploy: true
