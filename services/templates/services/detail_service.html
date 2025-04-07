@@ -1,39 +1,51 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
-<div class="container mt-5">
-    <!-- Section d'en-tête avec une image de fond -->
-    <div class="row mb-5">
-        <div class="col-md-6">
-            <h1 class="display-4 text-primary font-weight-bold">{{ service.name }}</h1>
-            <p class="text-muted lead">{{ service.description|truncatewords:30 }}</p>
+<div class="min-h-screen bg-gray-50 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header Section -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="space-y-4">
+                <h1 class="text-4xl font-bold text-gray-900">{{ service.name }}</h1>
+                <p class="text-lg text-gray-600">{{ service.description|truncatewords:30 }}</p>
+            </div>
+            <div class="relative h-[300px] md:h-auto">
+                <img 
+                    src="{{ service.image.url }}" 
+                    alt="{{ service.name }}"
+                    class="rounded-2xl w-full h-full object-cover shadow-xl"
+                >
+            </div>
         </div>
-        <div class="col-md-6">
-            <!-- Image du service avec bordure et ombre -->
-            <img src="{{ service.image.url }}" class="img-fluid rounded-lg shadow-lg" alt="{{ service.name }}">
-        </div>
-    </div>
 
-    <!-- Section des détails du service -->
-    <div class="row">
-        <div class="col-md-8">
-            <div class="card shadow-lg border-light mb-4">
-                <div class="card-body">
-                    <h4 class="card-title text-dark">Plus d'informations :</h4>
-                    <p class="card-text">{{ service.description }}</p>
-                    <h5 class="font-weight-bold">Prix : 
-                        <span class="badge bg-success text-white">{{ service.price }} FCFA</span>
-                    </h5>
-                    <p class="text-muted small mt-3">Nous vous garantissons un service de qualité, disponible à tout moment.</p>
+        <!-- Service Details -->
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="md:col-span-2">
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <h4 class="text-2xl font-semibold text-gray-900 mb-4">Plus d'informations :</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">{{ service.description }}</p>
+                    <div class="flex items-center gap-3">
+                        <span class="text-lg font-medium text-gray-900">Prix :</span>
+                        <span class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full font-semibold">
+                            {{ service.price }} FCFA
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Bouton de retour avec animation et styles -->
-    <div class="mt-4 text-center">
-        <a href="{% url 'liste_services' %}" class="btn btn-lg btn-primary shadow-sm hover-effect">Retour à la liste des services</a>
+        <!-- Back Button -->
+        <div class="mt-12 flex justify-center">
+            <a 
+                href="{% url 'liste_services' %}" 
+                class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors duration-200 font-medium"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Retour à la liste des services
+            </a>
+        </div>
     </div>
 </div>
-
 {% endblock %}

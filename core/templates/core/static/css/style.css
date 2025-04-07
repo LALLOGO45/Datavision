@@ -114,35 +114,3 @@ footer a:hover {
 }
 
 
-/* Effet hover sur les boutons */
-.hover-effect:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Cartes avec une ombre et une bordure arrondie */
-.card {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Amélioration de l'espacement pour un design aéré */
-.card-body {
-    padding: 2rem;
-}
-
-.container {
-    max-width: 1200px;
-}
-
-/* Style pour la description du service */
-.card-text {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Typographie de titre */
-h1.display-4 {
-    font-family: 'Roboto', sans-serif;
-}
