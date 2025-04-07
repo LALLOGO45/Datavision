@@ -2,6 +2,10 @@ services:
   - type: web
     name: datavision
     env: python
-    buildCommand: ""
+    buildCommand: pip install -r requirements.txt
     startCommand: gunicorn datavision.wsgi
-    autoDeploy: true
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: datavision.settings
+      - key: PYTHON_VERSION
+        value: 3.11

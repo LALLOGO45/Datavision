@@ -158,3 +158,5 @@ LOGOUT_REDIRECT_URL = '/login/'  # Redirige vers la connexion après déconnexio
 
 
 
+# Pour compresser et optimiser les fichiers statiques
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
