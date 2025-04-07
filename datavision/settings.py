@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-eq)lz__r=f$n5*i6hi7k@$+oxq&02gbsx*6q)5m*igs!&men21
 # Les modifications pour le deploiement
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.onrender.com']
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
